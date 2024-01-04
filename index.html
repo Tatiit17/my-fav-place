@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My favourite place</title>
+    <style>
+        body {
+            background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            color: white;
+            background: #9A98E1;
+            border: 1px solid #9A98E1;
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-size: 20px;
+            transition: all 200ms ease-in-out;
+        }
+
+        button:hover {
+            color: #9A98E1;
+            background: white;
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .container {
+            margin: 20px auto;
+            max-width: 600px;
+            background: #9A98E1;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .IcelandTour {
+            border-radius: 10px;
+            transition: all 150ms ease-in-out;
+        }
+
+        .IcelandTour:hover {
+            filter: contrast(80%);
+            transform: scale(1.1);
+        }
+
+        .buyTour {
+            background: #A5C3DA;
+            border: 1px solid #A5C3DA;
+            transition: all 200ms ease-in-out;
+        }
+
+        .buyTour:hover {
+            background: white;
+            color: #A5C3DA;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        .grid {
+            margin: 15px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        .grid img {
+            width: 100%;
+            border-radius: 8px;
+            transition: all 150ms ease-in-out;
+        }
+
+        .grid img:hover {
+            transform: scale(1.1);
+        }
+
+        .dark {
+            background: linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83));
+            color: white;
+        }
+
+        .dark .container {
+            background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+        }
+
+        .dark a {
+            color: white;
+            opacity: 255 255 255 0.4;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="theme-button">
+        Change theme
+    </button>
+    <h1>
+        Iceland
+    </h1>
+    <h2>
+        I love this place 🤍
+    </h2>
+    <div class="container">
+        <a href="https://www.icelandpersonaltours.is/?gclid=CjwKCAiA04arBhAkEiwAuNOsIrqLphAN7RM3CnB2zRfxVL4LqmFxrNthQj97JH5uVKeh1g-DHhiv0RoCZtwQAvD_BwE"
+            target="_blank">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/924/original/islandia-nie-jest-tania-ale-wiemy-jak-nie-przeplacac-w-podrozy-oto-sposoby-naczelnej-travelera_3.jpeg?1700928328"
+                class="IcelandTour" />
+        </a>
+        <div class="grid">
+            <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/923/original/z27098712Q_Islandia.jpg?1700928318" />
+            <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/922/original/z30216999Q_Islandia--gorace-zrodla-Blekitna-Laguna-.jpg?1700928305" />
+            <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/946/original/Islandia-najpiekniejsze-miejsca-38.jpg?1700943478" />
+            <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/920/original/Islandia-Reykjavik-fot.-Joanna-Suciu-1.jpg?1700928280" />
+
+        </div>
+        <p>
+            Iceland is an island country in the North Atlantic Ocean. The country's topography is defined by volcanoes,
+            geysers, hot
+            springs and lava fields. Iceland is home to the national parks Vatnajökull and Snæfellsjökull, which are
+            famous for
+            their huge glaciers. Most of the population lives in the capital, Reykjavik, which receives much of its
+            energy from a
+            geothermal power plant. In the city it is worth visiting the National Museum and the Saga Museum, the
+            exhibition of
+            which is dedicated to the history of the settlement of Iceland by the Vikings.
+            <br />
+            <a href="https://pl.wikipedia.org/wiki/Islandia">
+                <strong>See Wikipedia for more info 🇮🇸</strong>
+            </a>
+        </p>
+        <button class="buyTour">
+            Buy a tour
+        </button>
+    </div>
+    <footer>
+        Designed with 🤍 by Tati Italmazava
+    </footer>
+    <script>
+        function changeTheme() {
+            let body = document.querySelector("body");
+
+            body.classList.toggle("dark");
+        }
+
+        function buyTour() {
+            let name = prompt("What is your name?");
+            let email = prompt("What is your email?");
+
+            alert(
+                "Hello " + name + "! We will get in touch with you soon!");
+        }
+
+        let themeButton = document.querySelector(".theme-button");
+        themeButton.addEventListener("click", changeTheme);
+
+
+        let button = document.querySelector(".buyTour");
+        button.addEventListener("click", buyTour)
+
+    </script>
+</body>
+
+</html>
